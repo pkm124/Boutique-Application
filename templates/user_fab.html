@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image As Checkbox</title>
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/user_dash.css')}}" />
+  </head>
+  <body>
+    
+    <form action="/user_order" method="POST">
+
+        <input type="hidden" name="i1" value="{{i1}}">
+        <input type="hidden" name="i2" value="{{i2}}">
+        <input type="hidden" name="i3" value="{{i3}}">
+        <input type="hidden" name="i4" value="{{i4}}">
+
+        <div class="wrapper">
+        <div class="container">
+            <input type="checkbox" id="dessert-1" name="f1" value="f1"/>
+            <label for="dessert-1">
+            <img src="{{url_for('static', filename='images/i1.jpg')}}" />
+            </label>
+        </div>
+        <div class="container">
+            <input type="checkbox" id="dessert-2" name="f2" value="f2"/>
+            <label for="dessert-2">
+            <img src="{{url_for('static', filename='images/i2.jpg')}}" />
+            </label>
+        </div>
+        <div class="container">
+            <input type="checkbox" id="dessert-3" name="f3" value="f3"/>
+            <label for="dessert-3">
+            <img src="{{url_for('static', filename='images/i3.jpg')}}" />
+            </label>
+        </div>
+        <div class="container">
+            <input type="checkbox" id="dessert-4" name="f4" value="f4"/>
+            <label for="dessert-4">
+            <img src="{{url_for('static', filename='images/i3.jpg')}}" />
+            </label>
+        </div>
+        </div>
+        <input type="text" name="measurement">
+        <select name="payment">
+            <option value="UPI">UPI</option>
+            <option value="Card">Card</option>
+            <option value="COD">COD</option>
+        </select>
+        <input type="submit">
+    </form>
+  </body>
+</html>
